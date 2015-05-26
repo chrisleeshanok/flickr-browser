@@ -24,8 +24,11 @@
   "dependencies": {
     "async": "^1.0.0",
     "asynch": "^0.5.2",
+    "consolidate": "^0.12.1",
+    "dustjs-linkedin": "^2.7.1",
     "express": "^4.12.4",
     "nconf": "^0.7.1",
+    "path": "^0.11.14",
     "react": "^0.13.3",
     "request": "^2.55.0"
   },
@@ -35,7 +38,10 @@
     "gulp-autoprefixer": "^2.3.0",
     "gulp-minify-css": "^1.1.1",
     "gulp-ruby-sass": "^1.0.5",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.2.0",
     "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.1"
   }
 }

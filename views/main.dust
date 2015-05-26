@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flickr-Browser in React.js</title>
+        <link rel="stylesheet" href="../public/css/style.css"/>
+    </head>
+    <body>
+        <div id="photo-browser-wrapper">
+
+        </div>
+        <script src="../public/js/browser.js"></script>
+        <script>
+            var mountNode = document.getElementById('photo-browser-wrapper');
+            var photoData = {photoData|s};
+            React.render(React.createElement(FlickrBrowser, {photoData: photoData}), mountNode);
+        </script>
+    </body>
+</html>

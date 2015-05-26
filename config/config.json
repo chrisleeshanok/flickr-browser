@@ -4,6 +4,7 @@
         "endpoints": {
             "interesting": "flickr.interestingNess.getList"
         },
-        "api_key": "a5e95177da353f58113fd60296e1d250"
+        "api_key": "a5e95177da353f58113fd60296e1d250",
+        "api_suffix": "&extras=o_dims,owner_name&format=json&nojsoncallback=?"
     }
 }

@@ -4,7 +4,10 @@ var gulp        	= require('gulp'),
     watchify    	= require('watchify'),
     sass        	= require('gulp-ruby-sass'),
     autoprefixer 	= require('gulp-autoprefixer'),
-    minifyCSS		= require('gulp-minify-css');
+    minifyCSS		= require('gulp-minify-css'),
+    uglify          = require('gulp-uglify'),
+    source          = require('vinyl-source-stream'),
+    streamify       = require('gulp-streamify');
 
 var config = {
     browserify_entry: './lib/browser.js',
@@ -13,23 +16,22 @@ var config = {
     sass_dest: './public/css'
 };
 
-var bundler = browserify({
-	entries: [config.browserify_entry],
-	transform: [reactify],
-	debug: true,
-	cache: {},
-	packageCache: {},
-	fullPaths: true
-});
+
 
 gulp.task('browserify', function() {
-	var watcher = watchify(bundler);
-	return watcher.on('update', function() {
-		console.log('Bundling..');
-		watcher.bundle()
-		.pipe(gulp.dest(config.browserify_dest));
-		console.log('Done bundling.');
-	});
+    var bundler = browserify({
+        entries: [config.browserify_entry],
+        transform: [reactify],
+        debug: true,
+        cache: {},
+        packageCache: {},
+        fullPaths: true
+    });
+
+    var bundle = bundler.bundle();
+    bundle.pipe(source('browser.js'))
+    .pipe(streamify(uglify()))
+    .pipe(gulp.dest(config.browserify_dest));
 });
 
 //Preprocess .scss SASS files
@@ -44,7 +46,11 @@ gulp.task('scss', function() {
 	console.log('Done scss task');
 });
 
+gulp.task('watch', function() {
+    console.log('Watching for SCSS changes');
+	gulp.watch('lib/scss/**/*.scss', ['scss']);
+});
 
-gulp.task('watch', ['browserify', 'scss'], function() {
-	console.log('Watching!');
+gulp.task('default', ['scss'], function() {
+
 });
