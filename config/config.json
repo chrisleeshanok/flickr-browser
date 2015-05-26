@@ -1,0 +1,9 @@
+{
+    "flickr": {
+        "url": "https://api.flickr.com/services/rest/?method=",
+        "endpoints": {
+            "interesting": "flickr.interestingNess.getList"
+        },
+        "api_key": "a5e95177da353f58113fd60296e1d250"
+    }
+}

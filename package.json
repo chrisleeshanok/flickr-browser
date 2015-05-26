@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/chrisleeshanok/flickr-browser",
   "dependencies": {
+    "async": "^1.0.0",
+    "asynch": "^0.5.2",
     "express": "^4.12.4",
     "nconf": "^0.7.1",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "request": "^2.55.0"
   },
   "devDependencies": {
     "browserify": "^10.2.1",
