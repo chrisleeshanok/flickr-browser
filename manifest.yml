@@ -1,5 +1,5 @@
 ---
-- name: flickr-browser
+- name: flickri
   memory: 256M
   command: node app.js
   buildpack: nodejs_buildpack
