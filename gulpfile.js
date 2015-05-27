@@ -13,10 +13,10 @@ var config = {
     browserify_entry: './lib/browser.js',
     browserify_dest: './public/js',
     sass_entry: './lib/scss/style.scss',
-    sass_dest: './public/css'
+    sass_dest: './public/css',
+    scss_location: './lib/scss/**/*.scss',
+    react_components_location: './lib/react/components/**/*.js'
 };
-
-
 
 gulp.task('browserify', function() {
     var bundler = browserify({
@@ -47,10 +47,12 @@ gulp.task('scss', function() {
 });
 
 gulp.task('watch', function() {
-    console.log('Watching for SCSS changes');
-	gulp.watch('lib/scss/**/*.scss', ['scss']);
+    console.log('Now watching for react changes');
+    gulp.watch(config.react_components_location, ['browserify']);
+    console.log('Now watching for scss changes');
+    gulp.watch(config.scss_location, ['scss']);
 });
 
-gulp.task('default', ['scss'], function() {
+gulp.task('default', ['scss', 'browserify'], function() {
 
 });
