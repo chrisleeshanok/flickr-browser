@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="photo-browser-wrapper">
-
+            
         </div>
         <script src="../public/js/browser.js"></script>
         <script>
