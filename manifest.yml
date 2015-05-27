@@ -1,10 +1,8 @@
----
-- name: flickri
-  memory: 256M
-  command: node app.js
-  buildpack: nodejs_buildpack
-  domain: ng.bluemix.net
-  host: flickri
-  instances: 1
-  env:
-    env_type: development
+applications:
+host: flickri
+name: flickri
+command: node app.js
+path: .
+domain: ng.bluemix.net
+instances: 1
+memory: 512M
