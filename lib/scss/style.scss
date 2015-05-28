@@ -58,13 +58,22 @@ body {
 .photo-browser {
     margin-top: 50px;
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 601px) {
         .photo-column {
             float: left;
             width: 50%;
         }
     }
-    @media screen and (max-width 899px) {
+    @media screen and (max-width 600px) {
+        .photo-column {
+            float: left;
+            width: 100%;
+        }        
+    }
+
+    @media (max-width : 600px) 
+    and (-webkit-min-device-pixel-ratio : 1.5) 
+    and (min-device-pixel-ratio : 1.5) {
         .photo-column {
             float: left;
             width: 100%;

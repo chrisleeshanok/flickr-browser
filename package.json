@@ -28,6 +28,7 @@
     "dustjs-linkedin": "^2.7.1",
     "express": "^4.12.4",
     "nconf": "^0.7.1",
+    "node-jsx": "^0.13.3",
     "path": "^0.11.14",
     "react": "^0.13.3",
     "request": "^2.55.0"
