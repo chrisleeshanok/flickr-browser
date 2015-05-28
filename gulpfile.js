@@ -30,7 +30,7 @@ gulp.task('browserify', function() {
 
     var bundle = bundler.bundle();
     bundle.pipe(source('browser.js'))
-    .pipe(streamify(uglify()))
+    //.pipe(streamify(uglify()))
     .pipe(gulp.dest(config.browserify_dest));
 });
 
