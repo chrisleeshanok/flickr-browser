@@ -3,6 +3,7 @@
     <head>
         <title>Flickr-Browser in React.js</title>
         <link rel="stylesheet" href="../public/css/style.css"/>
+        <meta content="width=device-width, user-scalable=no" name="viewport">
     </head>
     <body>
         <div id="photo-browser-wrapper">
