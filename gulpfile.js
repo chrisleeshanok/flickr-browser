@@ -1,10 +1,10 @@
-var gulp        	= require('gulp'),
-    browserify  	= require('browserify'),
-    reactify    	= require('reactify'),
-    watchify    	= require('watchify'),
-    sass        	= require('gulp-ruby-sass'),
-    autoprefixer 	= require('gulp-autoprefixer'),
-    minifyCSS		= require('gulp-minify-css'),
+var gulp            = require('gulp'),
+    browserify      = require('browserify'),
+    reactify        = require('reactify'),
+    watchify        = require('watchify'),
+    sass            = require('gulp-ruby-sass'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    minifyCSS       = require('gulp-minify-css'),
     uglify          = require('gulp-uglify'),
     source          = require('vinyl-source-stream'),
     streamify       = require('gulp-streamify');
@@ -36,14 +36,14 @@ gulp.task('browserify', function() {
 
 //Preprocess .scss SASS files
 gulp.task('scss', function() {
-	console.log('Building, prefixing, and minifying stylesheets..');
-	return sass('lib/scss/style.scss', {sourcemap: true})
-		.pipe(autoprefixer({
-			browser: ['last two versions']
-		}))
-		.pipe(minifyCSS())
-		.pipe(gulp.dest('public/css'));
-	console.log('Done scss task');
+    console.log('Building, prefixing, and minifying stylesheets..');
+    return sass('lib/scss/style.scss', {sourcemap: true})
+        .pipe(autoprefixer({
+            browser: ['last two versions']
+        }))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('public/css'));
+    console.log('Done scss task');
 });
 
 gulp.task('watch', function() {
