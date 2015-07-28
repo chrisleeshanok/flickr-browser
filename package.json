@@ -24,9 +24,11 @@
   "dependencies": {
     "async": "^1.0.0",
     "asynch": "^0.5.2",
+    "backbone": "^1.2.1",
     "consolidate": "^0.12.1",
     "dustjs-linkedin": "^2.7.1",
     "express": "^4.12.4",
+    "flux": "^2.0.3",
     "nconf": "^0.7.1",
     "node-jsx": "^0.13.3",
     "path": "^0.11.14",

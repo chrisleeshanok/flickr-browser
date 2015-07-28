@@ -11,9 +11,8 @@
         </div>
         <script src="../public/js/browser.js"></script>
         <script>
-            var mountNode = document.getElementById('photo-browser-wrapper');
-            var photoData = {photoData|s};
-            React.render(React.createElement(FlickrBrowser, {photoData: photoData}), mountNode);
+            photoData = {photoData|s};
         </script>
+        <script src="../public/js/script.js"></script>
     </body>
 </html>
