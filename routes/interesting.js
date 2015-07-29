@@ -6,7 +6,7 @@ var router = express.Router();
 var React = require('react');
 
 var PhotoModel = require('../lib/models/PhotoModel').PhotoModel;
-var PhotoCollection = require('../lib/models/PhotoModel').PhotoCollection;
+var PhotoCollection = require('../lib/models/PhotoCollection').PhotoCollection;
 var FlickrBrowser = React.createFactory(require('../lib/react/components/FlickrBrowser').FlickrBrowser);
 
 router.get('/', function(req, res) {
@@ -24,9 +24,8 @@ router.get('/', function(req, res) {
         ],
         function (error, response) {
             if (!error) {
-                console.log(response[0].body);
-                var collection = new PhotoCollection(JSON.parse(response[0].body).photos.photo);
-                var reactSSR = React.renderToString(new FlickrBrowser({photoData: collection.models}));
+                PhotoCollection.add(JSON.parse(response[0].body).photos.photo);
+                var reactSSR = React.renderToString(new FlickrBrowser({photoCollection: PhotoCollection}));
                 var data = {
                     photoData: response[0].body,
                     reactSSR: reactSSR

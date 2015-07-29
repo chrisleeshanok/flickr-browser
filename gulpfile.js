@@ -15,7 +15,7 @@ var config = {
     sass_entry: './lib/scss/style.scss',
     sass_dest: './public/css',
     scss_location: './lib/scss/**/*.scss',
-    react_components_location: './lib/react/components/**/*.js'
+    js_components_location: './lib/**/*.js'
 };
 
 gulp.task('browserify', function() {
@@ -48,7 +48,7 @@ gulp.task('scss', function() {
 
 gulp.task('watch', function() {
     console.log('Now watching for react changes');
-    gulp.watch(config.react_components_location, ['browserify']);
+    gulp.watch(config.js_components_location, ['browserify']);
     console.log('Now watching for scss changes');
     gulp.watch(config.scss_location, ['scss']);
 });
