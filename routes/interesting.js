@@ -13,7 +13,7 @@ var FlickrBrowser = React.createFactory(require('../lib/react/components/FlickrB
 router.get('/', function(req, res) {
     var flickr = nconf.get('flickr');
     var interestingEndpoint = flickr.url + flickr.endpoints.interesting +
-        '&api_key=' + flickr.api_key + flickr.api_suffix;
+        '&api_key=' + flickr.api_key + flickr.api_suffix + flickr.api_photos_per_page;
     async.parallel([
         function(callback) {
             request.get({
