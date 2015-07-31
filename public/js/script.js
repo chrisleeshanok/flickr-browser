@@ -2,5 +2,5 @@
     var mountNode = document.getElementById('photo-browser-wrapper');
     PhotoCollection.add(photoData.photos.photo);
 
-    React.render(React.createElement(FlickrBrowser, {photoCollection: PhotoCollection}), mountNode);
+    React.render(React.createElement(FlickrBrowser, {photoCollection: PhotoCollection, appModel: AppModel}), mountNode);
 }());
