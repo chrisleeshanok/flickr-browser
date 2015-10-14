@@ -6,7 +6,8 @@
             "photosByPerson": "flickr.people.getPhotos"
         },
         "api_key": "a5e95177da353f58113fd60296e1d250",
-        "api_suffix": "&extras=owner_name&format=json&nojsoncallback=?"
+        "api_suffix": "&extras=owner_name&format=json&nojsoncallback=?",
+        "api_photos_per_page": "&per_page=10"
     },
     "secret": {
         "authorUserId": "70205182@N00"

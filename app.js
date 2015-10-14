@@ -9,8 +9,9 @@ var express = require('express'),
 var app = express();
 var interesting_router = require('./routes/interesting.js');
 var people_router = require('./routes/people.js');
+var api_router = require('./routes/api.js');
 
-nconf.env().argv();      
+nconf.env().argv();
 nconf.file('./config/config.json');
 
 //Set up the templating engine
@@ -24,8 +25,9 @@ app.set('views', './views');
 //-----------------------------------------------------------------------------
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
-app.use(interesting_router); 
-app.use(people_router); 
+app.use(interesting_router);
+app.use(people_router);
+app.use(api_router);
 
 var server = app.listen(process.env.PORT || 3000, function() {
     var port = server.address().port;

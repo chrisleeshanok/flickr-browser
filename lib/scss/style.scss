@@ -45,7 +45,7 @@ body {
                 text-decoration: none;
                 color: lighten(#DA4A36, 50%);
             }
-        } 
+        }
     }
     .navbar-bg {
         width: 100%;
@@ -72,11 +72,11 @@ body {
         .photo-column {
             float: left;
             width: 100%;
-        }        
+        }
     }
 
     @media (min-resolution: 250dpi)
-    and (-webkit-min-device-pixel-ratio : 1.5) 
+    and (-webkit-min-device-pixel-ratio : 1.5)
     and (min-device-pixel-ratio : 1.5) {
         .photo-column {
             float: left;
@@ -87,6 +87,11 @@ body {
 
     .clear-float {
         clear: both;
+    }
+
+    .fetch-controls {
+        text-align: center;
+        padding: 20px;
     }
 }
 
@@ -144,7 +149,7 @@ body {
             height: 100%;
             left: 0;
             top: 0;
-            text-align: center;          
+            text-align: center;
         }
 
         .close {
@@ -207,4 +212,3 @@ button {
         border-color: #000000;
     }
 }
-
